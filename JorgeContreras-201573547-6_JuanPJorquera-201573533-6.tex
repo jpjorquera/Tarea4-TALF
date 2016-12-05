@@ -80,99 +80,13 @@ La máquina de Turing se divide en dos grandes partes: inicialmente compara los 
 \end{itemize}
 
 \section{Pregunta 2}
-S $\rightarrow$ bS | Sa | aSb | $\varepsilon$ \\
- \\
- 
-\noindent (a) Primero, aseamos la gramática \\
-\indent S_{o} $\rightarrow$ S | $\varepsilon$ \\
-\indent S $\rightarrow$ bS | Sa | aSb | b | a | ab \\
-
-Luego, lo dejamos en FNC \\
-\indent S_{o} $\rightarrow$ S | $\varepsilon$ \\
-\indent S $\rightarrow$ BS | SA | XB | b | a | AB \\
-\indent A $\rightarrow$ a \\
-\indent B $\rightarrow$ b \\
-\indent X $\rightarrow$ AS \\
- \\
-
- 
-\noindent (b) Palabra: aaa \\
-\indent a$\hspace{2cm}$a$\hspace{2cm}$a \\
-\indent $\downarrow$ $\hspace{1.7cm}$ $\downarrow$ $\hspace{1.75cm}$ $\downarrow$ \\
-\indent S,A$\hspace{1.4cm}$S,A$\hspace{1.6cm}$S,A \\
- \\
-\indent aa$\hspace{2cm}$aa \\
-\indent $\downarrow$ $\hspace{2cm}$ $\downarrow$ \\
-\indent S,X$\hspace{1.7cm}$S,X \\
- \\
-\indent $\hspace{1cm}$aaa \\
-\indent $\hspace{0.3cm}$ $\swarrow$ $\hspace{0.7cm}$ $\searrow$ \\
-\indent a/aa$\hspace{1cm}$aa/a \\
-\indent $\downarrow$ $\hspace{1.6cm}$ $\downarrow$ \\
-\indent X$\hspace{1.75cm}$S \\
- \\
-\indent aaa es formado por S y X, y por lo tanto pertenece a la gramática.
- \\
- \\
- \\
- 
-Palabra: bbaa \\ 
-\indent b$\hspace{2cm}$b$\hspace{2cm}$a$\hspace{2cm}$a \\
-\indent $\downarrow$ $\hspace{1.8cm}$ $\downarrow$ $\hspace{1.7cm}$ $\downarrow$ $\hspace{1.8cm}$ $\downarrow$ \\
-\indent S,B$\hspace{1.5cm}$S,B$\hspace{1.6cm}$S,A$\hspace{1.6cm}$S,A \\
- \\
-\indent bb$\hspace{2cm}$ba$\hspace{2cm}$aa \\
-\indent $\downarrow$ $\hspace{2cm}$ $\downarrow$ $\hspace{2cm}$ $\downarrow$ \\
-\indent S$\hspace{2.2cm}$S$\hspace{2.1cm}$S,X \\
- \\
-\indent $\hspace{1cm}$bba$\hspace{4cm}$baa \\
-\indent $\hspace{0.3cm}$ $\swarrow$ $\hspace{0.7cm}$ $\searrow$ $\hspace{2.7cm}$ $\swarrow$ $\hspace{0.7cm}$ $\searrow$ \\
-\indent b/ba$\hspace{1cm}$bb/a $\hspace{1.8cm}$ b/aa$\hspace{1cm}$ba/a \\
-\indent $\downarrow$ $\hspace{1.6cm}$ $\downarrow$ $\hspace{2.4cm}$ $\downarrow$ $\hspace{1.5cm}$ $\downarrow$ \\
-\indent S$\hspace{1.75cm}$S $\hspace{2.4cm}$ S$\hspace{1.75cm}$S \\
- \\
-\indent $\hspace{2.1cm}$bbaa \\
-\indent $\hspace{1cm}$ $\swarrow$ $\hspace{0.6cm}$ $\downarrow$ $\hspace{0.7cm}$ $\searrow$ \\
-\indent b/baa$\hspace{1cm}$bb/aa$\hspace{1cm}$bba/a \\
-\indent $\hspace{0.3cm}$ $\downarrow$ $\hspace{1.5cm}$ $\downarrow$ $\hspace{1.6cm}$ $\downarrow$ \\
-\indent $\hspace{0.4cm}$S$\hspace{1.6cm}$ $\emptyset$ $\hspace{1.8cm}$S \\
- \\
-\indent bbaa es formado por S, por lo tanto pertenece a la gramática.
- \\
- \\
- \\
- 
-Palabra: aabba \\
-\indent a$\hspace{2cm}$a$\hspace{2cm}$b$\hspace{2cm}$b$\hspace{2cm}$a \\
-\indent $\downarrow$ $\hspace{1.8cm}$ $\downarrow$ $\hspace{1.7cm}$ $\downarrow$ $\hspace{1.8cm}$ $\downarrow$ $\hspace{1.8cm}$ $\downarrow$ \\
-\indent S,A$\hspace{1.5cm}$S,A$\hspace{1.6cm}$S,B$\hspace{1.6cm}$S,B$\hspace{1.6cm}$S,A \\
- \\
-\indent aa$\hspace{2cm}$ab$\hspace{2cm}$bb$\hspace{2cm}$ba \\
-\indent $\downarrow$ $\hspace{2cm}$ $\downarrow$ $\hspace{2cm}$ $\downarrow$ $\hspace{2cm}$ $\downarrow$ \\
-\indent S,X$\hspace{1.7cm}$S,X$\hspace{2cm}$S$\hspace{2.2cm}$S \\
- \\
-\indent $\hspace{1cm}$aab$\hspace{4cm}$abb$\hspace{4.1cm}$bba \\
-\indent $\hspace{0.3cm}$ $\swarrow$ $\hspace{0.7cm}$ $\searrow$ $\hspace{2.7cm}$ $\swarrow$ $\hspace{0.7cm}$ $\searrow$ $\hspace{2.7cm}$ $\swarrow$ $\hspace{0.7cm}$ $\searrow$ \\
-\indent a/ab$\hspace{1cm}$aa/b $\hspace{1.8cm}$ a/bb$\hspace{1cm}$ab/b $\hspace{1.8cm}$ b/ba$\hspace{1cm}$bb/a \\
-\indent $\downarrow$ $\hspace{1.6cm}$ $\downarrow$ $\hspace{2.4cm}$ $\downarrow$ $\hspace{1.5cm}$ $\downarrow$ $\hspace{2.4cm}$ $\downarrow$ $\hspace{1.5cm}$ $\downarrow$ \\
-\indent X$\hspace{1.75cm}$S $\hspace{2.3cm}$ X$\hspace{1.75cm}$S $\hspace{2.3cm}$ S$\hspace{1.75cm}$S \\
- \\
-\indent $\hspace{2.1cm}$aabb$\hspace{5.3cm}$abba \\
-\indent $\hspace{1cm}$ $\swarrow$ $\hspace{0.6cm}$ $\downarrow$ $\hspace{0.7cm}$ $\searrow$ $\hspace{2cm}$ $\hspace{1cm}$ $\swarrow$ $\hspace{0.6cm}$ $\downarrow$ $\hspace{0.7cm}$ $\searrow$ \\
-\indent a/abb$\hspace{1cm}$aa/bb$\hspace{1cm}$aab/b $\hspace{1cm}$ a/bba$\hspace{0.9cm}$ab/ba$\hspace{0.8cm}$abb/a \\
-\indent $\hspace{0.3cm}$ $\downarrow$ $\hspace{1.5cm}$ $\downarrow$ $\hspace{1.6cm}$ $\downarrow$ $\hspace{1.7cm}$ $\downarrow$ $\hspace{1.5cm}$ $\downarrow$ $\hspace{1.5cm}$ $\downarrow$ \\
-\indent $\hspace{0.4cm}$X$\hspace{1.6cm}$ $\emptyset$ $\hspace{1.7cm}$S $\hspace{1.6cm}$ X$\hspace{1.6cm}$ $\emptyset$ $\hspace{1.6cm}$S \\
- \\
-\indent $\hspace{3.4cm}$aabba \\
-\indent $\hspace{0.8cm}$ $\swarrow$ $\hspace{1.2cm}$ $\swarrow$ $\hspace{1.2cm}$ $\searrow$ $\hspace{1.2cm}$ $\searrow$ \\
-\indent a/abba$\hspace{1cm}$aa/bba$\hspace{1cm}$aab/ba$\hspace{1cm}$aabb/a \\
-\indent $\hspace{0.6cm}$ $\downarrow$ $\hspace{1.5cm}$ $\downarrow$ $\hspace{1.8cm}$ $\downarrow$ $\hspace{1.6cm}$ $\downarrow$ \\
-\indent $\hspace{0.6cm}$X$\hspace{1.7cm}$ $\emptyset$ $\hspace{1.8cm}$ $\emptyset$ $\hspace{1.7cm}$S \\
- \\
-\indent aabba es formado por S y X, por lo tanto pertenece a la gramática.
- \\
-
-\noindent (c) El lenguaje acepta la palabra vacía y cualquier otra combinación que se pueda formar con las letras a y b.
+\includegraphics[height=8cm]{p2.png}
+La maquina de Turing presenta tres cintas, la primera es aquella que presenta el input w y las otras dos son cintas inicialmente vacías. \\
+El funcionamiento de la maquina es sencillo, y al igual que el anterior se divide en dos partes:
+\begin{itemize}
+	\item El loop presente en la maquina (q0, q1, q2, q3) refiere a leer la primera palabra de w y escribirla en la segunda cinta, dejándola como $"X"$ en la primera, luego se dirige al final de la primera cinta y lee el último termino para escribirlo en la tercera cinta dejando el valor de la primera como $"X"$ nuevamente. Realiza el mismo proceso con la segunda y penúltima letra y así sucesivamente. Si la cantidad de letras es impar no logra entrar a la segunda parte, en cambio si la cantidad es par sí entra.
+	\item Cuando la cantidad de letras es par entra en esta sección (q7), lo primero que hace es llevar la segunda cinta al inicio para luego empezar a comparar la segunda y tercera cinta, como la tercera cinta se empezó escribiendo de atrás para adelante se compara la segunda cinta desde el inicio moviéndose hacia la derecha y la tercera desde el final moviéndose a la izquierda, si la comparación es fructífera llega al estado de aceptación, si no lo es, no lo hará.
+\end{itemize}
 
 \section{Pregunta 3}
 $WHAT!?!?!?$
