@@ -89,7 +89,16 @@ El funcionamiento de la maquina es sencillo, y al igual que el anterior se divid
 \end{itemize}
 
 \section{Pregunta 3}
-$WHAT!?!?!?$
+Vamos a demostrar que hay equivalencia entre las MT comunes y las que incluyen las trancisiones creadas por Juan Turing Contreras, sólo bastaría en lugar de pasar el input requerido para la transición, utilizar el complemento de él, donde por letra se realiza la misma transición, lo que podemos ver fácilmente en el ejemplo entregado:
+Con L = \{a,b,c\}.
+\begin{center}
+\includegraphics[height=4.2cm]{p3a.png}
+\end{center}
+Donde la transición simplemente pasaría a ser el complemento del input \{a,c\} en MT:
+\begin{center}
+\includegraphics[height=4.2cm]{p3b.png}
+\end{center}
+Acá también es fácil ver que nuevamente para hacer el camino hacia el otro lado es de igual forma, utilizando el complemento de \{b\}, por lo que notamos que ésto se puede realizar para cualquier transición que haya y son ambos tipos de máquinas equivalentes.
 
 
 \section{Pregunta 4}
@@ -212,22 +221,5 @@ Bombeamos por casos. \\
 \indent k<0 nos escapamos del lenguaje. \\
 
 \noindent Como nos escapamos en todos los casos posibles, $L_{5}$ no es LLC
-  
-\section{Pregunta 5}
-\subsection{Parte a}
-	\begin{itemize}
-		\item Convertir GLC G en autómata de pila y expresión regular R en AFD.
-		\item Construir PDA que incluya a G y a R simultáneamente ($L(G) \cap L(R)$), aceptando sólo en caso de que ambos acepten.
-		\item Transformar nuevo PDA a GLC.
-		\item Aplicar CYK sobre dicho GLC para verificar la pertenencia.
-	\end{itemize}
-\subsection{Parte b}
-	\begin{itemize}
-		\item Realizar aseo sobre GLC.
-		\item En el GLC verificar si existe algún loop, es decir, si alguna variable se produce a sí misma, o bien se producen entre ellas. De ser así inmediatamente se sabe que existe una palabra $w$ tal que $|w| \geq n$.
-		\item Realizar árbol sobre la gramática con S en la raíz, poninendo en los hijos todas las opciones de variables.
-		\item Repetir el paso anterior para cada hijo incluyendo las combinaciones posibles en cada una.
-		\item En caso de encontrar alguno de los hijos con largo mayor a $n$, entonces dicha palabra existe. Por otro lado, si se terminó el árbol y no se encontró, entonces dicho lenguaje no contiene palabras con dichas características.
-	\end{itemize}
 
 \end{document}
