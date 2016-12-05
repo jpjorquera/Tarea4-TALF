@@ -68,7 +68,7 @@ Juan Pablo Jorquera  201573533-6 \\
 \includegraphics[height=8cm]{p1.png}
 La máquina de Turing se divide en dos grandes partes: inicialmente compara los tamaños para decidir cual es el menor y luego, de ser iguales compara término a término para definir el menor.
 \begin{itemize}
-	\item Entre q0 y q4 va marcando los 1 con \$ y los 0 con \* y luego verifica que exista ese dígito en el término de la derecha.
+	\item Entre q0 y q4 va marcando los 1 con \$ y los 0 con * y luego verifica que exista ese dígito en el término de la derecha.
 	\item En q2 se sale al haber encontrado un dígito a la izquierda y haber terminado por completo el de la derecha, entonces el de la derecha es más corto, y en q5 y q6 lo decodifica y limpia el resto.
 	\item En q0 se sale al haber terminado el primer término, entonces avanza hasta la posición actual del término de la derecha y verifica si también terminó.
 	\item En caso de no haber terminado significa que el término de la izquierda era menor, entonces en q8, q9 y q10, limpia el término de la derecha y decodifica el de la izquierda.
