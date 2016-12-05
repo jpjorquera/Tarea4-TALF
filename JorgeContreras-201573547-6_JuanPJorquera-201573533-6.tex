@@ -23,7 +23,7 @@
 \newcommand{\semestre}{\small{Segundo Semestre 2016}}
 
 % Definiciones de Título e Integrantes de Experiencia
-\newcommand{\titulo}{Tarea 3 - TALF}
+\newcommand{\titulo}{Tarea 4 - TALF}
 \newcommand{\integrantes}{\begin{tabular}{c}
 Jorge Contreras 201573547-6 \\
 Juan Pablo Jorquera  201573533-6 \\
@@ -65,22 +65,19 @@ Juan Pablo Jorquera  201573533-6 \\
 \maketitle
 
 \section{Pregunta 1}
-S $\rightarrow$ aSbb | T \\
-\indent T $\rightarrow$ bTaa | S | $\varepsilon$ \\
- \\
- 
-\noindent (a) S_{o} $\rightarrow$ S | $\varepsilon$ \\
-\indent S $\rightarrow$ aSbb | T | abb \\
-\indent T $\rightarrow$ bTaa | S | baa \\
- 
-\noindent (b) S_{o} $\rightarrow$ S | $\varepsilon$ \\
-\indent S $\rightarrow$ aSbb | abb | bTaa | baa \\
-\indent T $\rightarrow$ bTaa | baa | aSbb | abb \\
-
-\noindent (c) S_{o} $\rightarrow$ S | $\varepsilon$ \\
-\indent S $\rightarrow$ aSbb | abb | bSaa | baa \\
-
-\noindent (d) Palabra vacía o aquellas palabras que en la primera mitad llevan a o b y en la segunda, de manera invertida, el complemento de cada letra repetido dos veces.
+\includegraphics[height=8cm]{p1.png}
+La máquina de Turing se divide en dos grandes partes: inicialmente compara los tamaños para decidir cual es el menor y luego, de ser iguales compara término a término para definir el menor.
+\begin{itemize}
+	\item Entre q0 y q4 va marcando los 1 con \$ y los 0 con \* y luego verifica que exista ese dígito en el término de la derecha.
+	\item En q2 se sale al haber encontrado un dígito a la izquierda y haber terminado por completo el de la derecha, entonces el de la derecha es más corto, y en q5 y q6 lo decodifica y limpia el resto.
+	\item En q0 se sale al haber terminado el primer término, entonces avanza hasta la posición actual del término de la derecha y verifica si también terminó.
+	\item En caso de no haber terminado significa que el término de la izquierda era menor, entonces en q8, q9 y q10, limpia el término de la derecha y decodifica el de la izquierda.
+	\item Por otro lado si también termina el término de la derecha, significa que eran de igual tamaño, donde avanza a q11 y de aquí se devuelve al comienzo de la cinta.
+	\item Acá para comparar son dos partes virtualmente simétricas, dependiendo si comienza con 0 o 1 (codificado), lo decodifica y avanza al término de la derecha para comparar hasta q16 y q17 respectivamente.
+	\item En caso de encontrar el mismo valor, se devuelve a q12 para seguir comparando.
+	\item De no ser así se sale en q19 y q22 para terminar devolviendo el término adecuado en el resto de los nodos de esta rama.
+	\item Finalmente en la situación de que ambos sean completamente iguales, se sale de q12 a q13, estándo ya decodificados por el loop los términos, simplemente borra el de la derecha.
+\end{itemize}
 
 \section{Pregunta 2}
 S $\rightarrow$ bS | Sa | aSb | $\varepsilon$ \\
