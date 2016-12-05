@@ -98,7 +98,11 @@ Donde la transición simplemente pasaría a ser el complemento del input \{a,c\}
 \begin{center}
 \includegraphics[height=4.2cm]{p3b.png}
 \end{center}
-Acá también es fácil ver que nuevamente para hacer el camino hacia el otro lado es de igual forma, utilizando el complemento de \{b\}, por lo que notamos que ésto se puede realizar para cualquier transición que haya y son ambos tipos de máquinas equivalentes.
+Acá también es fácil ver que nuevamente para hacer el camino hacia el otro lado es de igual forma, utilizando el complemento de \{b\}, por lo que notamos que ésto se puede realizar para cualquier transición que haya, por lo que generalizando lo antes dicho:
+
+Siendo $L_1$ el conjunto de letras que se incluyen en la transición de la nueva MT, su transición correspondiente sería $\delta(q_x, L_1) = (q_y, v, Mov)$, donde $v$ es por lo que se quiere reemplazar y $Mov$ el lado hacia el que se quiere mover, entonces en MT comunes correpondería al conjunto de trancisiones de la forma $\delta(q_x, u) = (q_y, v, Mov), \forall u \in L_1^c$. 
+
+Por otro lado si se tiene una trancision de una MT común $\delta(q_x, u) = (q_y, v, Mov), u \in L_2$ se traduce a la nueva MT como $\delta(q_x, L_2 - \{u\}) = (q_y, v, Mov)$, por lo que queda entonces demostrado.
 
 
 \section{Pregunta 4}
